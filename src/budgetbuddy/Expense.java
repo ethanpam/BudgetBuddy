@@ -2,6 +2,8 @@ package budgetbuddy;
 
 public class Expense
 {
+    private static int nextId = 1;
+
     private String name;
     private int costInCent;
     private int id;
@@ -10,10 +12,22 @@ public class Expense
     {
         this.name = name;
         this.costInCent = costInCent;
-        id ++;
+        this.id = nextId;
+        nextId ++;
     }
-    public String getString(String n)
+
+    public String getName()
     {
-        name = n;
+        return name;
+    }
+
+    public int getCostInCent()
+    {
+        return costInCent;
+    }
+
+    public int getId()
+    {
+        return id;
     }
 }
